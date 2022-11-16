@@ -1,0 +1,10 @@
+<div class="m-4">
+<h1>Give us your review !</h1>
+
+<%= simple_form_for([@restaurant, @review]) do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>
+
+</div>

@@ -1,0 +1,21 @@
+
+<div class="m-4">
+  <h1>Restaurants</h1>
+  <div class="d-flex m-4" >
+    <% @restaurants.each do |restaurant| %>
+      <div class="card m-2" style="width: 18rem;">
+        <img class="card-img-top" src="https://source.unsplash.com/random/?food" alt="restaurant image">
+        <div class="card-body">
+          <h5 class="card-title"><%= restaurant.name %></h5>
+          <p class="card-text"><%= restaurant.phone_number %></p>
+          <p class="card-text"><%= restaurant.address %></p>
+          <ul class="list-group">
+            <li class="list-group-item"><%= restaurant.reviews.first.content %></li>
+            <li class="list-group-item"><%= restaurant.reviews[1].content %></li>
+          </ul>
+          <%= link_to "More...",  restaurant_path(restaurant), class: "btn btn-primary"  %>        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
